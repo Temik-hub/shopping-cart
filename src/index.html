@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping-cart</title>
+</head>
+<body>
+  <header class="header">
+    <div class="header__container">
+      <div class="header__wrapper-top">
+        <div class="header__search-wrapper">
+          <button class="header__burger" aria-label="Open menu">
+            <span class="header__burger-line"></span>
+          </button>
+          <span class="header__search-icon"></span>
+          <input type="text" class="header__input-search" id="search">
+          <label for="search">Поиск</label>
+        </div>
+        <div class="header__logo">
+          <img src="../src/images/Logo.svg" alt="Logo" class="header__logo-svg">
+        </div>
+        <div class="header__buttons-wrapper">
+          <div class="header__login"><span class="visually-hidden">Личный Кабинет</span></div>
+          <div class="header__likes"><span class="visually-hidden">Избранное</span></div>
+          <div class="header__shopping-cart"><span class="visually-hidden">Корзина</span></div>
+        </div>
+      </div>
+      <div class="header__wrapper-bottom">
+        <nav class="header__navigation">
+          <ul class="header__nav-list">
+            <li class="header__nav-item">
+              <a href="#" class="header__nav-link">Каталог</a>
+            </li>
+            <li class="header__nav-item">
+              <a href="#" class="header__nav-link">Новинки</a>
+            </li>
+            <li class="header__nav-item">
+              <a href="#" class="header__nav-link">Скидки</a>
+            </li>
+          </ul>
+          <ul class="header__nav-list">
+            <li class="header__nav-item">
+              <a href="#" class="header__nav-link">О нас</a>
+            </li>
+            <li class="header__nav-item">
+              <a href="#" class="header__nav-link">Доставка</a>
+            </li>
+            <li class="header__nav-item">
+              <a href="#" class="header__nav-link">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="cart">
+      <div class="cart__container">
+        <div class="cart__heading">
+          <div class="cart__pagination">
+            <a href="#" class="cart__pagination-link">Главная</a>
+            <a href="#" class="cart__pagination-link cart__pagination-link--active">Корзина</a>
+          </div>
+          <h2 class="cart__title">Корзина</h2>
+          <div class="cart__login">
+            <span>Есть аккаунт?</span>
+            <a href="#" class="cart__heading-link">Войти</a>
+          </div>
+        </div>
+        <div class="cart__data-container">
+          <form action="#" class="cart__form">
+            <input type="text" class="cart__input cart__input--adress" name="adress" id="adress" placeholder="Адрес">
+            <fieldset class="cart__form-bottom">
+              <input type="text" class="cart__input cart__input--name" id="name" placeholder="Ваше Имя">
+              <input type="tel" class="cart__input cart__input--phone" id="phone" placeholder="Ваш Телефон">
+              <input type="email" class="cart__input cart__input--email" id="email" placeholder="Ваш Email">
+              <select class="cart__input cart__input--select">
+                <option value="0">Тип упаковки</option>
+                <option value="1">без упаковки</option>
+                <option value="2">стандартная</option>
+                <option value="3">подарочная</option>
+              </select>
+              <input type="text" class="cart__input cart__input--comment" id="comment" placeholder="Введите комментарий">
+            </fieldset>
+          </form>
+          <div class="map__container">
+            <div id="map"></div>
+          </div>
+        </div>
+        <section class="products">
+          <div class="products__container">
+            <h3 class="products__title">Выбранные товары:</h3>
+            <div class="products__card">
+              <div class="products__image-wrapper">
+                <img src="../src/images/product-1.png" alt="Product" class="products__image" width="150" height="150">
+              </div>
+              <div class="products__description">
+                <span class="products__card-title">Товар 1</span>
+                <p class="products__options">Описание товара, которое может быть длинным</p>
+                <div class="products__counter">1</div>
+              </div>  
+              <div class="products__price">
+                <span class="products__price-title">1090 руб.</span>
+                <span class="products__remove">Удалить</span>
+              </div>  
+            </div>
+            <div class="products__card">
+              <div class="products__image-wrapper">
+                <img src="../src/images/product-1.png" alt="Product" class="products__image" width="150" height="150">
+              </div>
+              <div class="products__description">
+                <span class="products__card-title">Товар 1</span>
+                <p class="products__options">Описание товара, которое может быть очень очень очень длинным</p>
+                <div class="products__counter">1</div>
+              </div>  
+              <div class="products__price">
+                <span class="products__price-title">1090 руб.</span>
+                <span class="products__remove">Удалить</span>
+              </div>  
+            </div>
+            <div class="products__total-wrapper">
+              <span class="products__total-title">Итог:</span>
+              <span class="products__total">1233 руб.</span>
+            </div>
+            <button class="products__button">Купить</button>
+          </div>
+        </section>
+      </div>
+    </section>
+  </main>
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=c102d04b-4656-4605-a279-d439ad298c08">
+  </script>
+</body>
+</html>
